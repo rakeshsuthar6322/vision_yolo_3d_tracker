@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.eggs/
+dist/
+.venv/
+
+.env
+.env.*
+
+# Tests / tooling
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ROS / colcon
+build/
+install/
+log/
+
+# Editors
+.vscode/
+.idea/
+
+# Data / weights / artifacts
+*.bag
+*.db3
+*.pt
+*.pth
+*.onnx
+*.engine
+
+data/
+datasets/

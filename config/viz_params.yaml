@@ -1,0 +1,7 @@
+# RViz marker publishing configuration
+
+viz:
+  input_topic: "/vision_yolo_3d_tracker/tracked_objects"
+  marker_topic: "/vision_yolo_3d_tracker/visualization_markers"
+  queue_size: 10
+  marker_lifetime_sec: 0.25

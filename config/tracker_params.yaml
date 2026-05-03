@@ -1,0 +1,19 @@
+# Kalman tracker configuration
+
+tracker:
+  # Association
+  max_distance: 2.5
+  max_age: 60
+  min_hits: 3
+  enable_class_gating: true
+
+  # Kalman filter
+  dt: 0.1
+  position_noise: 0.01
+  velocity_noise: 0.01
+  measurement_noise: 0.1
+
+  # Topics
+  input_topic: "/vision_yolo_3d_tracker/detections_3d"
+  output_topic: "/vision_yolo_3d_tracker/tracked_objects"
+  queue_size: 10

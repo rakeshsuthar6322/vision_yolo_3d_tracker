@@ -1,0 +1,48 @@
+# YOLOv8 detector configuration
+
+detector:
+  # Model selection
+  model_type: "yolov8m"          # e.g., yolov8n/s/m/l/x
+  model_path: ""                # optional: absolute/relative path to weights
+
+  # Inference parameters
+  confidence_threshold: 0.45
+  iou_threshold: 0.5
+  device: 0                      # 0, 1, ... or "cpu"
+  max_det: 300
+
+  # Classes to track (COCO class IDs)
+  # Names here become the published class_id strings.
+  classes_to_track:
+    car: 2
+    pedestrian: 0
+    bicycle: 1
+    motorcycle: 3
+    truck: 7
+    bus: 5
+
+  # Camera intrinsics (KITTI defaults)
+  camera_intrinsics:
+    fx: 721.5
+    fy: 721.5
+    cx: 609.5
+    cy: 172.9
+
+  # Placeholder depth used for 2D→3D back-projection (meters)
+  default_depth_m: 10.0
+
+  # Optional labeled image output
+  publish_labeled_images: true
+  left_labeled_topic: "/kitti/image/color/left/labeled"
+  right_labeled_topic: "/kitti/image/color/right/labeled"
+
+  # Topics
+  input:
+    left_image_topic: "/kitti/image/color/left"
+    right_image_topic: "/kitti/image/color/right"
+    enable_right_camera: true
+    queue_size: 10
+
+  output:
+    detections_topic: "/vision_yolo_3d_tracker/detections_3d"
+    queue_size: 10

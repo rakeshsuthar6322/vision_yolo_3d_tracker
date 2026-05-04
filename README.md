@@ -5,7 +5,7 @@
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
 ![YOLOv8](https://img.shields.io/badge/Model-YOLOv8-purple)
 
-<video src="files/demo.webm" width="800" autoplay loop muted playsinline></video>
+![Demo](files/demo.gif)
 
 ---
 
